@@ -52,7 +52,7 @@ export default class ProductService {
     const { brand, minPrice, maxPrice, outOfStock, ...rest } = query
 
     const filter: any = { ...rest }
-
+    
     if (brand) {
       filter.brand = brand
     }

@@ -15,7 +15,7 @@ const config = {
   // JWT configuration
   jwt: {
     secret: process.env.JWT_SECRET || "your-secret-key",
-    expiresIn: process.env.JWT_EXPIRES_IN || "30d",
+    expiresIn: parseInt(process.env.JWT_EXPIRES_IN || "4m"),
   },
 }
 

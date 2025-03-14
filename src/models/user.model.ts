@@ -84,7 +84,7 @@ UserSchema.methods.generateAuthToken = function (): string {
   };
 
   const options: SignOptions = {
-    expiresIn: parseInt(config.jwt.expiresIn, 10),
+    expiresIn:config.jwt.expiresIn,  
   };
 
   return jwt.sign(

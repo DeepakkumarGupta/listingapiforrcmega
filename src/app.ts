@@ -16,7 +16,9 @@ import sparePartRoutes from "./routes/sparePart.routes"
 const app: Application = express()
 
 // Middlewares
-app.use(cors())
+app.use(cors({
+    origin: ["http://localhost:3000"],
+}))
 app.use(helmet())
 app.use(compression())
 app.use(morgan("dev"))
